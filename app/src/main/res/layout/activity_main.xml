@@ -24,7 +24,7 @@
 
     <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <!-- https://howtodoandroid.com/android-chips-material-component/ -->
         <com.google.android.material.chip.ChipGroup
@@ -75,6 +75,7 @@
 
     <TextView
         android:id="@+id/message_view"
+        android:hint="which"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

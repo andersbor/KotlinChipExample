@@ -28,14 +28,11 @@ class MainActivity : AppCompatActivity() {
             binding.messageView.text = checked.toString()
         }
 
-        binding.chipGroupFilter.setOnCheckedChangeListener { group, checkedId ->
-            /*when (checkedId) {
-                R.id.best_offer_chip -> binding.messageView.text = "Best Offer"
-                R.id.fast_selling_chip -> binding.messageView.text = "Fast selling"
-            }*/
+        binding.chipGroupFilter.setOnCheckedStateChangeListener { group, checkedIds ->
             // https://howtodoandroid.com/android-chips-material-component/
-            val chip: Chip = group.findViewById(checkedId)
+            val chip: Chip = group.findViewById(checkedIds[0])
             binding.messageView.text = "You want " + chip.text
         }
+
     }
 }
